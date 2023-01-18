@@ -1,0 +1,14 @@
+prefix=/Users/nil2/Documents/learning-tools/FFmpeg-iOS-build-script/thin/x86_64
+exec_prefix=${prefix}
+libdir=/Users/nil2/Documents/learning-tools/FFmpeg-iOS-build-script/thin/x86_64/lib
+includedir=/Users/nil2/Documents/learning-tools/FFmpeg-iOS-build-script/thin/x86_64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.91.100
+Requires: libswresample >= 3.7.100, libavutil >= 56.51.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -liconv -lm -lz -framework AudioToolbox -L/usr/local/lib -lfdk-aac -L/usr/local/Cellar/x264/r3095/lib -lx264 -pthread -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo
+Libs.private: 
+Cflags: -I${includedir}
